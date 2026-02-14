@@ -1,0 +1,52 @@
+* HOME
+home__social
+https://www.linkedin.com/in/mostafa-said
+https://github.com/mostafasaid
+https://stackoverflow.com/users/mostafasaid
+
+home__description
+Fullstack ASP.NET Developer with expertise in building scalable web applications and RESTful APIs, delivering robust enterprise solutions.
+
+
+* ABOUT
+about__description
+Fullstack Developer specializing in ASP.NET Core, C#, and modern web technologies. Experienced in building enterprise-level applications with clean architecture and best practices.
+
+about__info-name
+Years <br> experience
+Completed <br> projects
+Technologies <br> mastered
+
+
+* SERVICES
+services__modal-service
+Backend API development with ASP.NET Core.
+Database design and optimization (SQL Server, Entity Framework).
+Frontend development with modern frameworks.
+Cloud deployment and DevOps (Azure, Docker).
+Microservices architecture implementation.
+Performance optimization and security best practices.
+
+
+* PORTFOLIO
+portfolio__description
+Enterprise-grade applications with scalable architecture, clean code, and modern design patterns.
+
+
+* PROJECT
+project__description
+Let's build your next project together. Contact me for a free consultation on your web application needs.
+
+
+* TESTIMONIAL
+testimonial__description
+Professional fullstack developer who delivers high-quality code with excellent communication and on-time delivery.
+
+
+* FOOTER
+footer__social
+https://www.linkedin.com/in/mostafa-said
+https://github.com/mostafasaid
+https://twitter.com/mostafasaid
+
+
