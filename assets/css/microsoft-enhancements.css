@@ -1,0 +1,452 @@
+/* ==================== Microsoft Fluent Design Enhancements ==================== */
+
+/* Prevent horizontal scroll */
+html,
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+* {
+    max-width: 100%;
+}
+
+/* Premium gradients and modern color scheme */
+:root {
+    --microsoft-blue: #0078D4;
+    --microsoft-blue-hover: #106EBE;
+    --microsoft-purple: #5B16D0;
+    --microsoft-gradient: linear-gradient(135deg, #0078D4 0%, #5B16D0 100%);
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
+    --shadow-xl: 0 12px 48px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-theme {
+    --glass-bg: rgba(0, 0, 0, 0.3);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+    --shadow-xl: 0 12px 48px rgba(0, 0, 0, 0.6);
+}
+
+/* Glass morphism effect for containers */
+.container {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Enhanced header with glass effect */
+.header {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Modern navigation */
+.nav {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.nav__link {
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav__link::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--microsoft-gradient);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(-50%);
+}
+
+.nav__link:hover::before,
+.nav__link.active-link::before {
+    width: 100%;
+}
+
+/* Premium buttons with Microsoft style */
+.button {
+    background: var(--microsoft-gradient);
+    border: none;
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.button:hover::before {
+    left: 100%;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.button:active {
+    transform: translateY(0);
+}
+
+/* Modern card designs */
+.about__container,
+.skills__container,
+.services__container,
+.portfolio__container,
+.contact__container {
+    background: var(--container-color);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--glass-border);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.about__container:hover,
+.skills__container:hover,
+.services__container:hover,
+.portfolio__container:hover,
+.contact__container:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+}
+
+/* Service cards with glass effect */
+.services__content {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.services__content::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, var(--microsoft-blue) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.services__content:hover::before {
+    opacity: 0.1;
+}
+
+.services__content:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--microsoft-blue);
+}
+
+/* Portfolio cards */
+.portfolio__content {
+    background: var(--container-color);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--glass-border);
+}
+
+.portfolio__content:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-xl);
+}
+
+.portfolio__img {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio__content:hover .portfolio__img {
+    transform: scale(1.1);
+}
+
+/* Skills section enhancement */
+.skills__content {
+    background: var(--container-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skills__content:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--microsoft-blue);
+}
+
+.skills__header {
+    cursor: pointer;
+    user-select: none;
+}
+
+.skills__bar {
+    background: linear-gradient(90deg, var(--microsoft-blue) 0%, var(--microsoft-purple) 100%);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.skills__bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+/* Contact form modern style */
+.contact__input,
+.contact__label {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact__input {
+    background: var(--input-color);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.contact__input:focus {
+    border-color: var(--microsoft-blue);
+    box-shadow: 0 0 0 4px rgba(0, 120, 212, 0.1);
+    outline: none;
+}
+
+/* Home section premium styling */
+.home__container {
+    position: relative;
+}
+
+.home__blob {
+    filter: drop-shadow(0 12px 32px rgba(0, 120, 212, 0.3));
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.home__blob:hover {
+    filter: drop-shadow(0 16px 48px rgba(91, 22, 208, 0.4));
+    transform: scale(1.05);
+}
+
+.home__blob-img {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.home__blob:hover .home__blob-img {
+    transform: scale(1.1);
+}
+
+.home__title {
+    background: var(--microsoft-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: var(--font-semi-bold);
+}
+
+/* Social icons with hover effects */
+.home__social-icon,
+.footer__social {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 50%;
+    padding: 0.75rem;
+    border: 1px solid var(--glass-border);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow-sm);
+}
+
+.home__social-icon:hover,
+.footer__social:hover {
+    background: var(--microsoft-gradient);
+    color: #fff;
+    transform: translateY(-4px) rotate(5deg);
+    box-shadow: var(--shadow-lg);
+    border-color: transparent;
+}
+
+/* Scroll button modern style */
+.home__scroll-button {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 0.75rem 1.5rem;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.home__scroll-button:hover {
+    background: var(--microsoft-gradient);
+    color: #fff;
+    border-color: transparent;
+    box-shadow: var(--shadow-md);
+    transform: translateY(4px);
+}
+
+/* Section title enhancements */
+.section__title {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.section__title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--microsoft-gradient);
+    border-radius: 2px;
+}
+
+/* Footer modern style */
+.footer {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Scroll to top button */
+.scrollup {
+    background: var(--microsoft-gradient);
+    border-radius: 50%;
+    box-shadow: var(--shadow-lg);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scrollup:hover {
+    transform: translateY(-4px) scale(1.1);
+    box-shadow: var(--shadow-xl);
+}
+
+/* Smooth animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Responsive enhancements */
+@media screen and (max-width: 768px) {
+
+    .about__container,
+    .skills__container,
+    .services__container,
+    .portfolio__container,
+    .contact__container {
+        padding: 1.5rem;
+        margin: 0 1rem;
+    }
+
+    html,
+    body {
+        overflow-x: hidden;
+        max-width: 100vw;
+        position: relative;
+    }
+
+    .container {
+        max-width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* Remove any potential scroll issues */
+.nav__menu,
+.home__container,
+.about__container,
+.skills__container,
+.portfolio__container,
+.contact__container {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Enhanced focus states for accessibility */
+*:focus-visible {
+    outline: 2px solid var(--microsoft-blue);
+    outline-offset: 2px;
+}
+
+/* Premium loading animation */
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+.loading {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

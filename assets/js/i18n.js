@@ -89,23 +89,32 @@ function setDirection(lang) {
     }
 }
 
-// Translate the page
+// Translate the page with smooth fade transition
 function translatePage(lang) {
-    const elements = document.querySelectorAll('[data-i18n]');
+    // Add smooth fade-out effect
+    document.body.style.opacity = '0.7';
+    document.body.style.transition = 'opacity 0.2s ease';
 
-    elements.forEach(element => {
-        const key = element.getAttribute('data-i18n');
-        const translation = getTranslation(key, lang);
+    setTimeout(() => {
+        const elements = document.querySelectorAll('[data-i18n]');
 
-        if (translation) {
-            // Check if we should translate placeholder
-            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                element.placeholder = translation;
-            } else {
-                element.textContent = translation;
+        elements.forEach(element => {
+            const key = element.getAttribute('data-i18n');
+            const translation = getTranslation(key, lang);
+
+            if (translation) {
+                // Check if we should translate placeholder
+                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                    element.placeholder = translation;
+                } else {
+                    element.textContent = translation;
+                }
             }
-        }
-    });
+        });
+
+        // Fade back in
+        document.body.style.opacity = '1';
+    }, 100);
 }
 
 // Get translation by key

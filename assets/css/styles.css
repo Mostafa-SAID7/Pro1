@@ -145,8 +145,36 @@ html[dir="rtl"] {
   direction: rtl;
 }
 
+/* Add smooth transition for all layout changes */
+html {
+  transition: direction 0.3s ease;
+}
+
+body {
+  transition: all 0.3s ease;
+}
+
+/* Smooth transitions for text and layout */
+* {
+  transition: margin 0.3s ease, padding 0.3s ease, text-align 0.3s ease;
+}
+
+/* Navigation RTL */
 html[dir="rtl"] .nav__btns {
   flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .nav__list {
+  text-align: right;
+}
+
+html[dir="rtl"] .nav__link {
+  text-align: right;
+}
+
+html[dir="rtl"] .nav__logo {
+  margin-right: 0;
+  margin-left: auto;
 }
 
 html[dir="rtl"] .language-selector {
@@ -164,6 +192,7 @@ html[dir="rtl"] .change-theme {
   margin-left: var(--mb-1);
 }
 
+/* Home Section RTL */
 html[dir="rtl"] .home__content {
   direction: rtl;
 }
@@ -172,21 +201,140 @@ html[dir="rtl"] .home__social {
   order: 3;
 }
 
+html[dir="rtl"] .home__data {
+  text-align: right;
+}
+
+html[dir="rtl"] .home__title,
+html[dir="rtl"] .home__subtitle,
+html[dir="rtl"] .home__description {
+  text-align: right;
+}
+
+/* Button Icons RTL */
 html[dir="rtl"] .button__icon {
   margin-left: 0;
   margin-right: var(--mb-0-5);
 }
 
+html[dir="rtl"] .button--flex {
+  flex-direction: row-reverse;
+}
+
+/* About Section RTL */
+html[dir="rtl"] .about__description {
+  text-align: right;
+}
+
+html[dir="rtl"] .about__info {
+  text-align: center;
+}
+
+html[dir="rtl"] .about__buttons {
+  justify-content: flex-end;
+}
+
+/* Skills RTL */
 html[dir="rtl"] .skills__icon,
 html[dir="rtl"] .qualification__icon {
   margin-right: 0;
   margin-left: var(--mb-0-75);
 }
 
+html[dir="rtl"] .skills__header {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .skills__arrow {
+  margin-left: auto;
+  margin-right: var(--mb-0-5);
+}
+
+html[dir="rtl"] .skills__title,
+html[dir="rtl"] .skills__subtitle {
+  text-align: right;
+}
+
+/* Qualification RTL */
+html[dir="rtl"] .qualification__data {
+  text-align: right;
+}
+
+html[dir="rtl"] .qualification__title,
+html[dir="rtl"] .qualification__subtitle {
+  text-align: right;
+}
+
+/* Services RTL */
 html[dir="rtl"] .services__modal-icon {
   margin-right: 0;
   margin-left: var(--mb-0-25);
 }
+
+html[dir="rtl"] .services__modal-title,
+html[dir="rtl"] .services__modal-description {
+  text-align: right;
+}
+
+html[dir="rtl"] .services__modal-service {
+  text-align: right;
+}
+
+/* Portfolio RTL */
+html[dir="rtl"] .portfolio__title,
+html[dir="rtl"] .portfolio__description {
+  text-align: right;
+}
+
+/* Testimonials RTL */
+html[dir="rtl"] .testimonial__description {
+  text-align: right;
+}
+
+html[dir="rtl"] .testimonial__name {
+  text-align: right;
+}
+
+/* Contact RTL */
+html[dir="rtl"] .contact__information {
+  text-align: right;
+}
+
+html[dir="rtl"] .contact__icon {
+  margin-right: 0;
+  margin-left: var(--mb-0-75);
+}
+
+/* Footer RTL */
+html[dir="rtl"] .footer__title,
+html[dir="rtl"] .footer__subtitle {
+  text-align: right;
+}
+
+html[dir="rtl"] .footer__links {
+  text-align: right;
+}
+
+html[dir="rtl"] .footer__socials {
+  justify-content: flex-start;
+}
+
+/* Scroll Elements RTL */
+html[dir="rtl"] .scrollup {
+  left: 1rem;
+  right: auto;
+}
+
+html[dir="rtl"] .home__scroll-button {
+  flex-direction: row-reverse;
+}
+
+/* Section Titles RTL */
+html[dir="rtl"] .section__title,
+html[dir="rtl"] .section__subtitle {
+  text-align: center;
+}
+
 
 
 /*==================== BASE ====================*/

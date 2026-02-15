@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="../assets/css/styles.css">
     <title>Contact - Mostafa Said</title>
 </head>
+
 <body>
     <header class="header" id="header">
         <nav class="nav container">
@@ -15,32 +17,33 @@
                 <ul class="nav__list grid">
                     <li class="nav__item">
                         <a href="../index.html" class="nav__link">
-                            <i class="uil uil-estate nav__icon"></i> Home
+                            <i class="uil uil-estate nav__icon"></i> <span data-i18n="nav.home">Home</span>
                         </a>
                     </li>
                     <li class="nav__item">
                         <a href="about.html" class="nav__link">
-                            <i class="uil uil-user nav__icon"></i> About
+                            <i class="uil uil-user nav__icon"></i> <span data-i18n="nav.about">About</span>
                         </a>
                     </li>
                     <li class="nav__item">
                         <a href="skills.html" class="nav__link">
-                            <i class="uil uil-file-alt nav__icon"></i> Skills
+                            <i class="uil uil-file-alt nav__icon"></i> <span data-i18n="nav.skills">Skills</span>
                         </a>
                     </li>
                     <li class="nav__item">
                         <a href="services.html" class="nav__link">
-                            <i class="uil uil-briefcase-alt nav__icon"></i> Services
+                            <i class="uil uil-briefcase-alt nav__icon"></i> <span
+                                data-i18n="nav.services">Services</span>
                         </a>
                     </li>
                     <li class="nav__item">
                         <a href="portfolio.html" class="nav__link">
-                            <i class="uil uil-scenery nav__icon"></i> Portfolio
+                            <i class="uil uil-scenery nav__icon"></i> <span data-i18n="nav.portfolio">Portfolio</span>
                         </a>
                     </li>
                     <li class="nav__item">
                         <a href="contact.html" class="nav__link active-link">
-                            <i class="uil uil-message nav__icon"></i> Contact
+                            <i class="uil uil-message nav__icon"></i> <span data-i18n="nav.contact">Contact</span>
                         </a>
                     </li>
                 </ul>
@@ -48,6 +51,13 @@
             </div>
 
             <div class="nav__btns">
+                <div class="language-selector">
+                    <i class="uil uil-globe"></i>
+                    <select id="language-select" class="language-select">
+                        <option value="en">English</option>
+                        <option value="ar">العربية</option>
+                    </select>
+                </div>
                 <i class="uil uil-moon change-theme" id="theme-button"></i>
                 <div class="nav__toggle" id="nav-toggle">
                     <i class="uil uil-apps"></i>
@@ -58,8 +68,8 @@
 
     <main class="main">
         <section class="contact section" id="contact">
-            <h2 class="section__title">Contact Me</h2>
-            <span class="section__subtitle">Get in touch</span>
+            <h2 class="section__title" data-i18n="contact.title">Contact Me</h2>
+            <span class="section__subtitle" data-i18n="contact.subtitle">Get in touch</span>
 
             <div class="contact__container container grid">
                 <div>
@@ -67,8 +77,8 @@
                         <i class="uil uil-phone contact__icon"></i>
 
                         <div>
-                            <h3 class="contact__title">Call Me</h3>
-                            <span class="contact__subtitle">+20-123-456-7890</span>
+                            <h3 class="contact__title" data-i18n="contact.phone">Call Me</h3>
+                            <span class="contact__subtitle" data-i18n="contact.phoneNumber">+20-123-456-7890</span>
                         </div>
                     </div>
 
@@ -76,8 +86,9 @@
                         <i class="uil uil-envelope contact__icon"></i>
 
                         <div>
-                            <h3 class="contact__title">Email</h3>
-                            <span class="contact__subtitle">mostafa.said@example.com</span>
+                            <h3 class="contact__title" data-i18n="contact.email">Email</h3>
+                            <span class="contact__subtitle"
+                                data-i18n="contact.emailAddress">mostafa.said@example.com</span>
                         </div>
                     </div>
 
@@ -85,8 +96,8 @@
                         <i class="uil uil-map-marker contact__icon"></i>
 
                         <div>
-                            <h3 class="contact__title">Location</h3>
-                            <span class="contact__subtitle">Cairo, Egypt</span>
+                            <h3 class="contact__title" data-i18n="contact.location">Location</h3>
+                            <span class="contact__subtitle" data-i18n="contact.locationAddress">Cairo, Egypt</span>
                         </div>
                     </div>
                 </div>
@@ -94,26 +105,26 @@
                 <form action="" class="contact__form grid">
                     <div class="contact__inputs grid">
                         <div class="contact__content">
-                            <label for="" class="contact__label">Name</label>
+                            <label for="" class="contact__label" data-i18n="contact.name">Name</label>
                             <input type="text" class="contact__input">
                         </div>
                         <div class="contact__content">
-                            <label for="" class="contact__label">Email</label>
+                            <label for="" class="contact__label" data-i18n="contact.emailLabel">Email</label>
                             <input type="email" class="contact__input">
                         </div>
                     </div>
                     <div class="contact__content">
-                        <label for="" class="contact__label">Project</label>
+                        <label for="" class="contact__label" data-i18n="contact.project">Project</label>
                         <input type="text" class="contact__input">
                     </div>
                     <div class="contact__content">
-                        <label for="" class="contact__label">Message</label>
+                        <label for="" class="contact__label" data-i18n="contact.message">Message</label>
                         <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
                     </div>
 
                     <div>
                         <a href="#" class="button button--flex">
-                            Send Message
+                            <span data-i18n="contact.sendMessage">Send Message</span>
                             <i class="uil uil-message button__icon"></i>
                         </a>
                     </div>
@@ -126,19 +137,19 @@
         <div class="footer__bg">
             <div class="footer__container container grid">
                 <div>
-                    <h1 class="footer__title">Mostafa Said</h1>
-                    <span class="footer__subtitle">Fullstack Developer</span>
+                    <h1 class="footer__title" data-i18n="footer.name">Mostafa Said</h1>
+                    <span class="footer__subtitle" data-i18n="footer.subtitle">Fullstack Developer</span>
                 </div>
 
                 <ul class="footer__links">
                     <li>
-                        <a href="services.html" class="footer__link">Services</a>
+                        <a href="services.html" class="footer__link" data-i18n="footer.services">Services</a>
                     </li>
                     <li>
-                        <a href="portfolio.html" class="footer__link">Portfolio</a>
+                        <a href="portfolio.html" class="footer__link" data-i18n="footer.portfolio">Portfolio</a>
                     </li>
                     <li>
-                        <a href="contact.html" class="footer__link">Contact</a>
+                        <a href="contact.html" class="footer__link" data-i18n="footer.contact">Contact</a>
                     </li>
                 </ul>
 
@@ -159,8 +170,11 @@
         </div>
     </footer>
 
- 
 
+
+    <script src="../assets/js/translations.js"></script>
+    <script src="../assets/js/i18n.js"></script>
     <script src="../assets/js/main.js"></script>
 </body>
+
 </html>
